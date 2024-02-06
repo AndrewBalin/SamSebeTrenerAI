@@ -44,8 +44,8 @@ The Flask application has three main routes:
     "equipment": "gym",
     "allergy": "peanuts",
     "training_days": 5,
-    "liked_exercises": ["running", "swimming"],
-    "disliked_exercises": ["cycling"],
+    "liked_exercises": "running, swimming",
+    "disliked_exercises": "cycling",
     "health_issues": "none"
 }
 ```
@@ -57,9 +57,9 @@ The Flask application has three main routes:
     "level": "intermediate",
     "equipment": "dumbbells",
     "bottles": true,
-    "training_days": ["Monday", "Wednesday", "Friday"],
-    "liked_exercises": ["bench press", "deadlift"],
-    "disliked_exercises": ["squats"],
+    "training_days": "Monday, Wednesday, Friday",
+    "liked_exercises": "bench press, deadlift",
+    "disliked_exercises": "squats",
     "health_issues": "none"
 }
 ```
