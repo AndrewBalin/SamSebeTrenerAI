@@ -30,6 +30,47 @@ python app.py
 
 The application has the following endpoints:
 
+The Flask application has three main routes:
+
+1. `/create_ration`: This route is used to create a ration. It accepts a POST request with a JSON body containing the necessary data and returns a generated ration.
+```json
+{
+    "goal": "weight loss",
+    "birth_date": "1990-01-01",
+    "height": 180,
+    "weight": 80,
+    "gender": "male",
+    "activity_level": "moderate",
+    "equipment": "gym",
+    "allergy": "peanuts",
+    "training_days": 5,
+    "liked_exercises": ["running", "swimming"],
+    "disliked_exercises": ["cycling"],
+    "health_issues": "none"
+}
+```
+
+2. `/create_training`: This route is used to create a training plan. It accepts a POST request with a JSON body containing the necessary data and returns a generated training plan.
+```json
+{
+    "goal": "muscle gain",
+    "level": "intermediate",
+    "equipment": "dumbbells",
+    "bottles": true,
+    "training_days": ["Monday", "Wednesday", "Friday"],
+    "liked_exercises": ["bench press", "deadlift"],
+    "disliked_exercises": ["squats"],
+    "health_issues": "none"
+}
+```
+
+3. `/detect_eat`: This route is used to detect eating habits. It accepts a POST request with a JSON body containing a URL and returns the detected eating habits.
+```json
+{
+    "url": "https://example.com/image.jpg"
+}
+```
+
 ### POST /create_ration
 
 This endpoint is used to create a ration. It accepts a JSON body with the necessary data and returns a generated ration.

@@ -1,18 +1,18 @@
 from GPTCreator import GPTCreator
 
 
-class EatDetecter(GPTCreator):
+class EatDetector(GPTCreator):
     def __init__(self, key):
         super().__init__(key)
 
-    def generate(self, prompt):
+    def generate(self, prompt, url):
         completion = self.client.chat.completions.create(
             model="gpt-4-vision-preview",
             messages=[
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", "text": promt},
+                        {"type": "text", "text": prompt},
                         {
                             "type": "image_url",
                             "image_url": {
